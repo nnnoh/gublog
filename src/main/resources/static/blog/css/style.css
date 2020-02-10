@@ -1,0 +1,96 @@
+/* From */
+body{
+    background: #fafafa;
+}
+/* End */
+
+/* article brief From */
+.articles-list{
+    margin: 5px 0px;
+}
+
+.article-div{
+    background: white;
+    margin-bottom: 2px;
+    padding: 10px;
+    height: 150px;
+}
+
+.article-cover{
+    float: left;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+}
+.article-img{
+    width: 150px;
+}
+
+.article-brief{
+    float: left;
+    padding-left: 10px;
+    
+}
+
+.article-brief>div{
+    margin-bottom: 10px;
+}
+
+.article-title a{
+    font-size: 24px;
+    text-decoration: underline;
+}
+
+.article-title a.layui-text:hover{
+    color: #a065ff;
+}
+
+.article-meta span{
+    color: silver;
+    padding-right: 10px;
+}
+
+.articles-page>div{
+    float: right;
+}
+/* article brief End */
+
+/* article From */
+article{
+    background: white;
+    margin: 5px 0px;
+    padding: 10px;
+}
+
+article>div{
+    margin-bottom: 10px;
+}
+
+.a-title{
+    padding-bottom: 0.3em;
+    font-size: 2.25em;
+    line-height: 1.2;
+    padding-left: 30px;
+}
+
+.a-meta{
+    border-bottom: 1px solid rgb(241, 241, 241);
+}
+
+.a-meta span{
+    color: silver;
+    padding-left: 30px;
+}
+
+.editormd-preview-container, .editormd-html-preview {
+    width: auto;
+}
+
+/* article End */
+
+/* category From*/
+.category-title{
+    font-size: 24px;
+    margin: 10px;
+}
+/* category End */

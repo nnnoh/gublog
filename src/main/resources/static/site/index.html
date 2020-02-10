@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>咕咕咕</title>
+  <link rel="stylesheet" href="/common/lib/layui/css/layui.css">
+  <!--  <script src="https://cdn.staticfile.org/jquery/2.0.0/jquery.min.js"></script>-->
+  <link rel="stylesheet" href="/site/css/style.css">
+  <link rel="stylesheet" href="/common/compont/nav/nav.css">
+</head>
+
+<body>
+  <div class="layui-header header" winter1="">
+    <div class="layui-main">
+      <a class="logo" href="#">
+        <!-- <img src="" alt="guIcon"> -->
+        <span>GU</span>
+      </a>
+    </div>
+  </div>
+  <div class="layui-container">
+    <div class="layui-row layui-col-space5">
+      <div class="layui-col-xs12 layui-col-md4">
+        [TOC]
+      </div>
+      <div class="layui-col-xs12 layui-col-md8">
+        [Content]
+        <div id="articleDiv-x">
+          <img>
+          <div id="articleIntro-x">
+            <div id="articleTitle-x"></div>
+            <div id="articleTime-x"></div>
+            <div id="articleContent-x"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+  <!-- [if lt IE 9]>
+  <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+  <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+<![endif] -->
+  <script src="/common/lib/layui/layui.js"></script>
+  <script src="/common/js/guConfig.js"></script>
+  <script>
+    layui.extend({ 'index': '/site/js/index' }).use('index', function () {
+      layui.index.init();
+    });
+  </script>
+</body>
+
+</html>

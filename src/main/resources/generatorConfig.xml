@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <context id="DB2Tables" targetRuntime="MyBatis3">
+        <!--避免生成重复代码的插件-->
+        <plugin type="com.mine.gublog.mbg.OverIsMergeablePlugin"/>
+
+        <!--是否在代码中显示注释-->
+        <commentGenerator>
+            <property name="addRemarkComments" value="true"/> <!--增加数据库备注-->
+            <property name="suppressAllComments" value="false" /> <!--是否取消注释 -->
+            <property name="suppressDate" value="true"/> <!--是否取消生成注释代时间戳 -->
+        </commentGenerator>
+
+        <!--数据库连接地址账号密码-->
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://127.0.0.1:3306/guapp?characterEncoding=UTF-8&amp;serverTimezone=GMT%2B8" userId="root"
+                        password="123mysql">
+        </jdbcConnection>
+
+        <!-- 类型转换 -->
+        <javaTypeResolver>
+            <!-- 默认false，把JDBC DECIMAL 和 NUMERIC 类型解析为 Integer true，把JDBC DECIMAL
+                和 NUMERIC 类型解析为java.math.BigDecimal -->
+            <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver>
+
+        <!--Model模型生成器,用来生成含有主键key的类，记录类 以及查询Example类。 targetProject可以使用“MAVEN”来自动生成，这样生成的代码会在target/generatord-source目录下-->
+        <javaModelGenerator targetPackage="com.mine.gublog.entity" targetProject="src/main/java">
+            <!-- 是否在当前包路径下新加一层schema,eg： true:com.github.jackieonwaymodel.[schemaName] -->
+            <property name="enableSubPackages" value="true"/>
+            <!-- 从数据库返回的值被清理前后的空格 -->
+            <property name="trimStrings" value="false"/>
+            <!-- 是否生成构造函数 默认是false -->
+            <property name="constructorBased" value="false"/>
+            <!-- 建立的Model对象是否 不可改变  即生成的Model对象不会有 setter方法，只有构造方法 -->
+            <property name="immutable" value="false"/>
+        </javaModelGenerator>
+        <!--生成xml映射文件存放位置-->
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+        <!--生成mapper接口类存放位置
+        客户端代码，生成易于使用的针对Model对象和XML配置文件 的代码
+                type="ANNOTATEDMAPPER",生成Java Model 和基于注解的Mapper对象
+                type="MIXEDMAPPER",生成基于注解的Java Model 和相应的Mapper对象
+                type="XMLMAPPER",生成SQLMap XML文件和独立的Mapper接口
+        -->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.mine.gublog.dao" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+        <!--生成对应表及类名-->
+        <table tableName="fms_file">
+            <!--使用数据库中实际的字段名作为生成的实体类的属性-->
+            <property name="useActualColumnNames" value="false"/>
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+
+
+<!--        <table tableName="bams_article_content">-->
+<!--            &lt;!&ndash;使用数据库中实际的字段名作为生成的实体类的属性&ndash;&gt;-->
+<!--            <property name="useActualColumnNames" value="false"/>-->
+<!--            <generatedKey column="id" sqlStatement="JDBC"/>-->
+<!--            <columnOverride column="content" jdbcType="VARCHAR" />-->
+<!--        </table>-->
+    </context>
+</generatorConfiguration>

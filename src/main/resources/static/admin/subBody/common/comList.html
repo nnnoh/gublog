@@ -1,0 +1,22 @@
+<!-- 文章列表-->
+<div id="mainDiv">
+  <div id="listCondition">
+    <!-- <div class="layui-inline">
+      <label class="layui-form-label">(标题)</label>
+      <div class="layui-input-inline">
+        <input type="text" name="title" id="(adc-title)" required lay-verify="required" placeholder="(查询标题)"
+          autocomplete="off" class="layui-input">
+      </div>
+    </div> -->
+    <div class="listOpBtn">
+        <button id="queryBtn" class="layui-btn"><i class="layui-icon layui-icon-search"></i>查询</button>
+        <button id="resetBtn" class="layui-btn"><i class="layui-icon layui-icon-refresh"></i>重置</button>
+        <button id="addBtn" class="layui-btn"><i class="layui-icon layui-icon-add-1"></i>新增</button>
+      </div>
+  </div>
+  <table id="tbl" lay-filter="test"></table>
+</div>
+<script type="text/html" id="tableTrTool">
+  <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit"><i class="layui-icon layui-icon-edit"></i>编辑</a>
+  <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del"><i class="layui-icon layui-icon-delete"></i>删除</a>
+</script>

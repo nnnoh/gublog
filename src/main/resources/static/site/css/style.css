@@ -1,0 +1,19 @@
+
+/* 登录注册页 FROM */
+#loginDiv{
+    width: 500px;
+    background-color: #fff;
+}
+
+#loginDiv li{
+    width: 45%;
+}
+
+#loginDiv .layui-input-inline{
+    width: 65%
+}
+
+#loginDiv .layui-btn {
+    margin-left: 200px;
+}
+/* 登录注册页 END */

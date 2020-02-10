@@ -1,0 +1,49 @@
+
+/* admin From */
+#admin-body{
+/* .layui-body 权重优先级不够 */
+    padding: 15px;
+    /* 取消footfer */
+    bottom: 0px;
+}
+/* admin End */
+
+/* article From */
+#articleMainDiv,#mainDiv{
+    height: 100%;
+}
+
+#articleMainDiv .layui-form-label{
+    width: auto;
+    margin-left: 20px;
+}
+#mainDiv .layui-form-label{
+    width: auto;
+    margin-left: 20px;
+}
+
+.listOpBtn{
+    margin-left: 10px;
+    display: inline;
+}
+/* article End */
+
+/* articleDetail From */
+#articleDetailMainDiv{
+    padding: 15px;
+}
+
+.layui-input-block .layui-input, .layui-textarea {
+    width: 90%;
+}
+
+#ad-content{
+    height: 200px;
+}
+/* articleDetail End */
+/* categoryDetail From */
+#categoryDetailMainDiv{
+    padding: 15px;
+}
+
+/* categoryDetail End */

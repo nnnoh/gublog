@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>咕博</title>
+  <link rel="stylesheet" href="/common/lib/editor.md/css/editormd.preview.css" />
+  <link rel="stylesheet" href="/common/lib/layui/css/layui.css">
+  <link rel="stylesheet" href="/blog/css/style.css">
+  <link rel="stylesheet" href="/common/compont/nav/nav.css">
+</head>
+
+<body>
+  <div class="layui-header header" winter1="">
+    <div class="layui-main">
+      <a class="logo" href="#">
+        <!-- <img src="" alt="guIcon"> -->
+        <span>GU</span>
+      </a>
+    </div>
+  </div>
+  <div class="layui-container">
+    <div class="layui-row layui-col-space5">
+      <!-- <div class="layui-col-xs12 layui-col-md4">
+        [TOC]
+      </div> -->
+      <div class="layui-col-xs12 layui-col-md12">
+        <article>
+          <div class="a-title"></div>
+          <div class="a-meta"><span class="a-author"></span><span class="a-publishTime"></span></div>
+          <div id="markdown-view">
+            <textarea style="display:none;" class="a-content"></textarea>
+          </div>
+        </article>
+        <!-- 鸽了 -->
+        <!-- <div class="response">
+          <div class="response-title">评论</div>
+          <div class="response-form-div layui-form" lay-filter="response">
+            <div class="layui-form-item">
+              <div class="layui-input-inline">
+                <input type="text" name="name" id="name" required lay-verify="required" placeholder="请输入昵称"
+                  autocomplete="off" class="response-form layui-input">
+              </div>
+            </div>
+            <div class="layui-form-item layui-form-text">
+              <div class="layui-input-block">
+                <textarea name="content" id="ad-content" required lay-verify="required" placeholder="请输入内容"
+                  class="response-form layui-textarea"></textarea>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <div class="layui-input-block">
+                <button class="response-form layui-btn" id="submitBtn">submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="comment">
+          <div class="comment-parent">
+            <div class="comment-icon">
+              <img src="/common/img/defaultIcon.png" class="layui-nav-img comment-img">
+            </div>
+            <div class="comment-body">
+              <div class="comment-name"><span class="cn-name"></span><span class="cn-resp"></span><span
+                  class="cn-time"></span></div>
+              <div class="comment-content"></div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+  <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+  <!-- [if lt IE 9]>
+  <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+  <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+<![endif] -->
+  <script src="/common/lib/layui/layui.js"></script>
+  <script src="/common/js/guConfig.js"></script>
+  <script src="/common/lib/jquery.min.js"></script>
+  <script src="/common/lib/editor.md/editormd.min.js"></script>
+  <script src="/common/lib/editor.md/lib/marked.min.js"></script>
+  <script src="/common/lib/editor.md/lib/prettify.min.js"></script>
+  <script>
+    layui.use('article', function () {
+      layui.article.init();
+    });
+  </script>
+</body>
+
+</html>
