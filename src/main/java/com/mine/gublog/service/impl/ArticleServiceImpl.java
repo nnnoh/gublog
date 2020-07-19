@@ -54,7 +54,7 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Transactional(rollbackFor = Exception.class)
     @Override
-    @CacheEvict(value="redisCacheManager",key="getArticleByCategory")
+    @CacheEvict(value="redisCacheManager",key="'getArticleByCategory'")
     public int addArticle(BamsArticleDTO bamsArticleDto) {
         // 插入信息到 bams_article, bams_article_content 表
         // 忽视传入的两表主键
@@ -91,7 +91,7 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Transactional(rollbackFor = Exception.class)
     @Override
-    @CacheEvict(value="redisCacheManager",key="getArticleByCategory")
+    @CacheEvict(value="redisCacheManager",key="'getArticleByCategory'")
     public int updateArticle(BamsArticleDTO bamsArticleDto) {
         // article_id, content_id，user_id, create_time 在insert后不再修改
         // bams_article_content
@@ -117,7 +117,7 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Transactional(rollbackFor = Exception.class)
     @Override
-    @CacheEvict(value="redisCacheManager",key="getArticleByCategory")
+    @CacheEvict(value="redisCacheManager",key="'getArticleByCategory'")
     public int deleteArticle(Long id) {
         // bams_article_content
         BamsArticleContentExample contentExample = new BamsArticleContentExample();
@@ -197,7 +197,7 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
-    @CacheEvict(value="redisCacheManager",key="getArticleByCategory")
+    @CacheEvict(value="redisCacheManager",key="'getArticleByCategory'")
     public int updateArticleCategoryWithIdByCategoryId(Long oldId, Long newId) {
         BamsArticleExample bamsArticleExample = new BamsArticleExample();
         BamsArticleExample.Criteria criteria = bamsArticleExample.createCriteria();

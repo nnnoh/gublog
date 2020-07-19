@@ -14,7 +14,7 @@ layui.define([], function(exports) {
         if (cookieStr != document.cookie) {
             cookieObj = {};
             cookieStr = document.cookie;
-            var cookieArr = cookieStr.split(";");
+            var cookieArr = cookieStr.split("; ");
             for (kvStr of cookieArr) {
                 var kv = kvStr.split("=");
                 if (kv.length == 2) {

@@ -72,7 +72,6 @@ layui.define(['ajaxUtil', 'cookieUtil', 'adminUtil', 'dateTransfer', 'jquery', '
         var url, type;
         if (dataDetail.updateMode == adminUtil.UPDATE_MODE.NEW) {
             data.createTime = data.updateTime;
-            dataDetail.updateMode = adminUtil.UPDATE_MODE.UPDATE;
 
             // 新增 api
             url = "/admin/category";
@@ -95,6 +94,7 @@ layui.define(['ajaxUtil', 'cookieUtil', 'adminUtil', 'dateTransfer', 'jquery', '
             data: data,
             success: ajaxUtil.successCallback(function (res) {
                 dataDetail = $.extend(true, dataDetail, {data:res});
+                dataDetail.updateMode = adminUtil.UPDATE_MODE.UPDATE;
                 alert("操作成功！");
                 layer.title("修改分类",layerIndex);
             })
